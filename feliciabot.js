@@ -4,10 +4,9 @@ module.exports = function (req, res, next) {
     text : username + ' ' + 'http://giphy.com/gifs/friday-movie-craig-bye-felisha-l0O9xk5sLcmWmOkaQ'
   };
 
-  // avoid infinite loop
-  // if (username !== 'slackbot') {
+  if (username !== 'slackbot') {
     return res.status(200).json(botPayload);
-  // } else {
+  } else {
     return res.status(200).end();
-  // }
+  }
 }
