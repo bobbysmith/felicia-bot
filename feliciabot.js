@@ -1,7 +1,8 @@
 module.exports = function (req, res, next) {
-  var userName = req.body.user_name;
+  var username = req.body.user_name;
   var botPayload = {
-    text : userName + ' ' + 'http://giphy.com/gifs/friday-movie-craig-bye-felisha-l0O9xk5sLcmWmOkaQ'
+    // text : username + ' ' + 'http://giphy.com/gifs/friday-movie-craig-bye-felisha-l0O9xk5sLcmWmOkaQ'
+    text: '@' + username + 'Bye, Felicia!'
   };
 
   // avoid infinite loop
